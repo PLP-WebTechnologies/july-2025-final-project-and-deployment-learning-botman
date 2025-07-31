@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ZushaApp - Contact Us</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link href="style.css" rel="stylesheet">
+
+  <style>
+    /* Additional styles for the contact page */
+    body {
+      background: url('images/contact.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      padding-top: 80px; /* Adjusted padding for the navbar */
+      margin-bottom: 100px; /* Added margin for the footer */
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    #contact {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* Form styles */
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+
+    /* Hotlines styles */
+    #hotlines {
+      margin-top: 40px;
+    }
+
+    #hotlines h2 {
+      margin-bottom: 20px;
+    }
+
+    #hotlines ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #hotlines li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #343a40; /* Dark background color */
+      color: white;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Social media logos styles */
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">ZushaApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Login
+          </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="admin/login.php">Admin Login</a>
+            <a class="dropdown-item" href="user/userlogin.php">User Login</a>
+            <a class="dropdown-item" href="police/policelogin.php">Police Login</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="container mt-5">
+    <h1>Contact Us</h1>
+    <p>Have questions or concerns? Reach out to us!</p>
+
+    <form id="contactForm" onsubmit="validateForm(event)">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- Hotlines Section -->
+    <div id="hotlines" class="mt-5">
+      <h2>Emergency Hotlines - Nairobi, Kenya</h2>
+      <p>For immediate assistance, contact the following hotlines:</p>
+
+      <ul>
+        <li>Police Emergency: <strong>999</strong></li>
+        <li>Police Hotline: <strong>112</strong></li>
+        <li>Anti-Terrorism Police Hotline: <strong>0702 432877</strong></li>
+        <!-- Add more hotlines as needed -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 fixed-bottom">
+    <ul class="social-icons">
+      <li><a href="#" target="_blank"> <i class="fab fa-facebook"></i> </a></li>
+      <li><a href="#" target="_blank"> <i class="fab fa-twitter"></i> </a></li>
+      <li><a href="#" target="_blank"> <i class="fab fa-linkedin"></i> </a></li>
+      <!-- Add more social media icons as needed -->
+    </ul>
+    <p>&copy; 2024 ZushaApp. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      // Simple validation
+      if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Create a JSON object with the form data (you can send it to the server)
+      var formData = {
+        name: name,
+        email: email,
+        message: message
+      };
+
+      // Simulate sending an email (client-side only, actual implementation requires server-side code)
+      console.log('Form data:', formData);
+      alert('Message sent. We will be in touch.');
+
+      // Reset the form or perform any other actions you need
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+
+</body>
+
+</html>
